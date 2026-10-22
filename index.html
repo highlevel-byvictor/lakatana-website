@@ -768,8 +768,20 @@ body{overflow-x:clip}
 .k-glow::after{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px solid rgba(201,162,74,.6)}
 .k-bubble{position:absolute;z-index:2;right:-38%;top:20%;max-width:220px;padding:14px 18px;border-radius:18px 18px 18px 4px;background:linear-gradient(135deg,#0B0812,#2A1758 70%,#6A3FD1);color:#fff;font-size:13.5px;line-height:1.45;box-shadow:0 18px 40px rgba(20,12,38,.35);border:1px solid rgba(201,162,74,.55);display:flex;flex-direction:column;gap:4px}
 .k-bubble b{font-family:var(--f-display);font-size:19px;font-weight:600;color:#F3D58A}
-#kontakt .two{align-items:start}#kontakt .form{align-content:start}
+#kontakt .two{align-items:start}
+#kontakt{background:linear-gradient(180deg,rgba(247,240,228,.86) 0%,rgba(247,240,228,.6) 45%,rgba(236,226,245,.82) 100%),url(media/stuttgart-bw.webp) center 40%/cover no-repeat!important}#kontakt .form{align-content:start}
 @media (max-width:820px){.k-lara{width:62%;margin:28px auto 0}.k-bubble{right:-30%;top:8%;max-width:170px;font-size:12.5px}}
+
+/* v16 Stimmen mit Lara-Hintergrund */
+.voices-sec{position:relative;overflow:hidden;background:#07060B;margin:28px max(10px,env(safe-area-inset-left,0px));border-radius:48px 12px 48px 12px;box-shadow:0 50px 120px -60px rgba(40,20,80,.8);padding-top:clamp(120px,24vw,340px)!important}
+.voices-sec .vbg{position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(7,6,11,.88) 0%,rgba(7,6,11,.35) 34%,rgba(7,6,11,0) 55%,rgba(7,6,11,.25) 100%),linear-gradient(180deg,transparent 0%,transparent 42%,rgba(7,6,11,.6) 62%,rgba(7,6,11,.92) 100%),url(media/lara-point.webp) 62% 12%/cover no-repeat}
+.voices-sec .h2{color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.7)}
+.voices-sec .eyebrow{text-shadow:0 2px 10px rgba(0,0,0,.8)}
+.voices-sec .vid{background:rgba(12,8,22,.6)!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(201,162,74,.45)!important}
+.voices-sec .vid .ph{background:none!important}
+.voices-sec .vid b{color:#fff}.voices-sec .vid small{color:#F3D58A}
+.voices-sec .voices>div:not(.vid) p,.voices-sec .voices p{color:rgba(240,235,248,.9)}
+@media (max-width:820px){.voices-sec{border-radius:32px 10px 32px 10px;padding-top:300px!important}.voices-sec .vbg{background:linear-gradient(180deg,transparent 0%,transparent 55%,#07060B 100%) 50% 0/100% 560px no-repeat,url(media/lara-point.webp) 50% 0/auto 560px no-repeat,#07060B}.voices-sec .vid .ph>div{padding-top:64px}}
 </style>
 
 <div class="ticker" aria-label="Aktuelle Angebote"><div class="track" id="tickerTrack"></div></div>
@@ -1085,8 +1097,9 @@ body{overflow-x:clip}
   </section>
 
   <!-- Stimmen -->
-  <section class="sec light">
-    <div class="wrap">
+  <section class="sec dark voices-sec">
+    <div class="vbg" aria-hidden="true"></div>
+    <div class="wrap" style="position:relative;z-index:2">
       <span class="eyebrow" data-en="Real voices">Echte Stimmen</span>
       <h2 class="h2" style="margin:14px 0 36px" data-en="What artists <em>say.</em>">Was Künstler <em>sagen.</em></h2>
       <div class="voices">
@@ -1125,7 +1138,7 @@ body{overflow-x:clip}
   </section>
 
   <!-- Kontakt -->
-  <section class="sec light" id="kontakt" style="background:var(--ink2);border-top:1px solid var(--line)">
+  <section class="sec light" id="kontakt" style="border-top:1px solid var(--line)">
     <div class="wrap two">
       <div>
         <span class="eyebrow" data-en="Contact">Kontakt</span>
@@ -1136,11 +1149,6 @@ body{overflow-x:clip}
           <span>☎ <span class="todo" data-en="Business number follows">Geschäftsnummer folgt</span></span>
           <span>⌖ Stuttgart</span>
         </div>
-        <figure class="k-lara" aria-label="Lara">
-          <span class="k-glow"></span>
-          <img src="media/lara-cut.webp" alt="Lara – LA KATANA Studio" loading="lazy">
-          <figcaption class="k-bubble"><b data-en="Hi, I'm Lara.">Hi, ich bin Lara.</b><span data-en="Write to me – I reply personally.">Schreib mir – ich antworte dir persönlich.</span></figcaption>
-        </figure>
       </div>
       <form class="form panel" data-form id="contactForm">
         <label class="f"><span data-en="Name">Name</span><input id="c-name" required autocomplete="name"></label>
