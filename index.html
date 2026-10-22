@@ -16,9 +16,7 @@
 <title>LA KATANA Studio – Tonstudio Stuttgart | Recording, Mixing, Mastering</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="LA KATANA Studio Stuttgart – Recording, Mixing, Mastering, Online Mix & Master, Beats. Sound ist mein Schwert. Emotion ist mein Ziel.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&family=Pinyon+Script&display=swap">
+<link rel="stylesheet" href="vendor/fonts.css">
 <style>
 /* Layout: schwarze Bühne, Logo mittig, Inhalte als ruhige Kapitel mit „Klingen-Schnitten“ (feine Lichtlinien) dazwischen. Prinz-Struktur, Sony-Klarheit. */
 :root{
@@ -1064,7 +1062,7 @@ body{overflow-x:clip}
         <label class="f full"><span data-en="Message">Nachricht</span><textarea id="c-msg"></textarea></label>
         <label class="check full"><input type="checkbox" id="c-ok" required><span data-en="I agree that my data will be used to process my request (privacy policy).">Ich bin einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage genutzt werden (Datenschutz).</span></label>
         <div class="full"><button class="btn solid" type="submit" data-en="Send message">Nachricht senden</button></div>
-        <div class="ok-msg full" data-en="Thank you! In the live site, the message now goes to Lara.">Danke! Auf der Live-Seite geht die Nachricht jetzt an Lara.</div>
+        <div class="ok-msg full" data-en="The form is being set up. Please write directly to info@produced-by-lakatana.com.">Das Formular wird gerade eingerichtet. Bitte schreib direkt an info@produced-by-lakatana.com.</div>
       </form>
     </div>
   </section>
@@ -1073,7 +1071,7 @@ body{overflow-x:clip}
     <div class="wrap">
       <div class="news dark">
         <div><span class="eyebrow" data-en="Newsletter">Katana-Letter</span><h3 style="font-size:clamp(28px,3vw,40px);margin-top:10px" data-en="Subscribe to our Katana letter">Abonniere unseren Katana-Letter</h3><p class="muted" style="margin-top:8px;font-size:14px" data-en="Offers and free beats first.">Angebote und kostenlose Beats zuerst.</p></div>
-        <form data-form id="newsForm"><input type="email" id="n-mail" placeholder="Wie lautet deine E-Mail Adresse?" data-en-ph="What is your email address?" required aria-label="E-Mail"><button class="btn violet" type="submit" data-en="Subscribe">ABONNIEREN</button><div class="ok-msg" style="flex-basis:100%" data-en="Almost done – in the live site a confirmation email follows (double opt-in).">Fast geschafft – live folgt eine Bestätigungs-Mail.</div><p class="muted" style="flex-basis:100%;font-size:12px" data-en="By clicking SUBSCRIBE you agree to our privacy and cookie policies.">Durch Klicken auf ABONNIEREN stimmst du unseren Datenschutz- und Cookie-Richtlinien zu.</p></form>
+        <form data-form id="newsForm"><input type="email" id="n-mail" placeholder="Wie lautet deine E-Mail Adresse?" data-en-ph="What is your email address?" required aria-label="E-Mail"><button class="btn violet" type="submit" data-en="Subscribe">ABONNIEREN</button><div class="ok-msg" style="flex-basis:100%" data-en="The newsletter starts soon – no data has been stored.">Der Newsletter startet bald – es wurden keine Daten gespeichert.</div><p class="muted" style="flex-basis:100%;font-size:12px" data-en="By clicking SUBSCRIBE you agree to our privacy and cookie policies.">Durch Klicken auf ABONNIEREN stimmst du unseren Datenschutz- und Cookie-Richtlinien zu.</p></form>
       </div>
     </div>
   </section>
@@ -1145,7 +1143,7 @@ body{overflow-x:clip}
       <label class="f full"><span data-en="Wishes for the sound">Wünsche zum Sound</span><textarea id="u-msg"></textarea></label>
       <label class="check full"><input type="checkbox" id="u-ok" required><span data-en="I hold the rights to the uploaded material and accept the terms and privacy policy.">Ich habe die Rechte am hochgeladenen Material und akzeptiere AGB und Datenschutz.</span></label>
       <div class="full"><button class="btn violet" type="submit" data-en="Submit music">Musik einreichen</button></div>
-      <div class="ok-msg full" data-en="Received! In the live site the upload goes to Lara's secure storage and you get a confirmation.">Angekommen! Live landen die Dateien in Laras sicherem Speicher und du bekommst eine Bestätigung.</div>
+      <div class="ok-msg full" data-en="The upload is being set up. Please send a download link to info@produced-by-lakatana.com.">Der Upload wird gerade eingerichtet. Schick deinen Download-Link (z. B. WeTransfer) bitte an info@produced-by-lakatana.com.</div>
     </form>
   </div></section>
 </div>
@@ -1216,17 +1214,35 @@ body{overflow-x:clip}
 
 <!-- ======================= RECHTLICHES ======================= -->
 <div class="view" id="v-legal">
-  <section class="pagehead"><div class="wrap"><span class="eyebrow" data-en="Legal">Rechtliches</span><h1 class="big" data-en="Legal <em>notice.</em>">Impressum<em>.</em></h1></div></section>
+  <section class="pagehead"><div class="wrap"><span class="eyebrow" data-en="Legal">Rechtliches</span><h1 class="big" data-en="Legal <em>notice.</em>">Rechtliches<em>.</em></h1></div></section>
   <section class="sec light" style="padding-top:20px"><div class="wrap legaltext">
     <h2 id="impressum">Impressum</h2>
-    <p>Angaben gemäß § 5 DDG</p>
-    <p>LA KATANA Studio<br>Inhaberin: Lara Topic<br>Hackstraße 38/1<br>70190 Stuttgart</p>
-    <p>E-Mail: info@produced-by-lakatana.com<br>Telefon: <span class="todo">Geschäftsnummer folgt</span></p>
-    <p>Umsatzsteuer: <span class="todo">Steuernummer / USt-IdNr. folgt bzw. Hinweis Kleinunternehmerregelung § 19 UStG – mit Steuerberater klären</span></p>
-    <h2 id="datenschutz">Datenschutz</h2>
-    <p class="todo">Datenschutzerklärung wird mit einem Generator bzw. Anwalt erstellt (Kontaktformular, Upload, Calendly, Newsletter, Login, Cookies, Hosting).</p>
+    <p><strong>Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)</strong></p>
+    <p>LA KATANA Studio<br>Inhaberin: Lara Topic<br>Hackstraße 38/1<br>70190 Stuttgart<br>Deutschland</p>
+    <p><strong>Kontakt</strong><br>E-Mail: info@produced-by-lakatana.com<br>Telefon: <span class="todo">wird ergänzt</span></p>
+    <p><strong>Umsatzsteuer</strong><br>Eine Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz liegt derzeit nicht vor. <span class="todo">Angaben werden nach Erteilung der Steuernummer ergänzt.</span></p>
+    <p><strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</strong><br>Lara Topic, Anschrift wie oben</p>
+    <p><strong>Verbraucherstreitbeilegung</strong><br>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+    <p><strong>Haftung für Inhalte und Links</strong><br>Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität können wir jedoch keine Gewähr übernehmen. Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für diese fremden Inhalte ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+    <p><strong>Urheberrecht</strong><br>Die durch die Seitenbetreiberin erstellten Inhalte und Werke (Texte, Logos, Fotos, Hörproben) unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung und Verbreitung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung. Einzelne Bilder und Videos stammen von den lizenzfreien Plattformen Pexels und Mixkit.</p>
+    <p><strong>Website-Erstellung</strong><br>High Level Performance by Victor – www.highlevel-performance.de</p>
+
+    <h2 id="datenschutz">Datenschutzerklärung</h2>
+    <p><strong>1. Verantwortliche</strong><br>Verantwortlich für die Datenverarbeitung auf dieser Website ist: Lara Topic, LA KATANA Studio, Hackstraße 38/1, 70190 Stuttgart, E-Mail: info@produced-by-lakatana.com.</p>
+    <p><strong>2. Allgemeines</strong><br>Wir verarbeiten personenbezogene Daten nur, soweit dies für eine funktionsfähige Website, unsere Inhalte und Leistungen erforderlich ist oder du eingewilligt hast. Rechtsgrundlagen sind insbesondere Art. 6 Abs. 1 lit. a (Einwilligung), lit. b (Vertrag und vorvertragliche Maßnahmen) und lit. f DSGVO (berechtigtes Interesse).</p>
+    <p><strong>3. Hosting und Server-Logfiles</strong><br>Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf der Website verarbeitet GitHub technisch notwendige Daten, insbesondere deine IP-Adresse, Datum und Uhrzeit des Zugriffs, die aufgerufene Seite sowie Browser- und Systeminformationen. Dies dient der sicheren und stabilen Auslieferung der Website (Art. 6 Abs. 1 lit. f DSGVO). Dabei kann eine Übermittlung in die USA stattfinden. GitHub ist unter dem EU-US Data Privacy Framework zertifiziert, für das ein Angemessenheitsbeschluss der EU-Kommission besteht. Weitere Informationen: https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement</p>
+    <p><strong>4. SSL- bzw. TLS-Verschlüsselung</strong><br>Diese Seite nutzt aus Sicherheitsgründen eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennst du am Schloss-Symbol in der Adresszeile deines Browsers.</p>
+    <p><strong>5. Schriftarten, Karte und Medien</strong><br>Schriftarten, Kartendaten (OpenStreetMap, OpenMapTiles), Bilder und Videos werden direkt von unserem eigenen Webspace geladen. Dabei werden keine Daten an Google oder andere Drittanbieter übertragen.</p>
+    <p><strong>6. Cookies und lokale Speicherung</strong><br>Wir setzen keine Tracking- oder Marketing-Cookies ein. Gespeichert wird lediglich deine Auswahl im Cookie-Hinweis im lokalen Speicher deines Browsers, damit der Hinweis nicht bei jedem Besuch erneut erscheint. Diese Speicherung ist technisch erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG, Art. 6 Abs. 1 lit. f DSGVO). Du kannst sie jederzeit in deinem Browser löschen. Sollten wir künftig Statistik- oder Marketing-Dienste einsetzen, geschieht dies nur mit deiner Einwilligung und wird hier ergänzt.</p>
+    <p><strong>7. Kontakt per E-Mail</strong><br>Wenn du uns per E-Mail kontaktierst, verarbeiten wir deine Angaben (z. B. Name, E-Mail-Adresse, Inhalt der Nachricht) zur Bearbeitung deiner Anfrage und für mögliche Anschlussfragen (Art. 6 Abs. 1 lit. b bzw. f DSGVO). Unser E-Mail-Postfach wird bei der ALL-INKL.COM – Neue Medien Münnich, Hauptstraße 68, 02742 Friedersdorf, betrieben. Wir löschen die Daten, sobald sie für den Zweck nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+    <p><strong>8. Formulare, Upload, Newsletter und Kundenbereich</strong><br>Das Kontaktformular, der Datei-Upload, die Newsletter-Anmeldung und der Kundenbereich befinden sich derzeit im Aufbau. Über diese Funktionen werden aktuell keine Daten übertragen oder gespeichert. Sobald sie in Betrieb gehen, ergänzen wir diese Datenschutzerklärung.</p>
+    <p><strong>9. Links zu externen Diensten</strong><br>Auf unserer Website verlinken wir auf Angebote Dritter, z. B. Google Maps, Calendly, Instagram, TikTok, YouTube und BeatStars. Diese Inhalte sind nicht eingebettet. Erst wenn du einen Link anklickst, wirst du auf die Seite des jeweiligen Anbieters weitergeleitet, der dann eigenverantwortlich Daten verarbeitet. Es gelten dort die Datenschutzhinweise des jeweiligen Anbieters.</p>
+    <p><strong>10. Deine Rechte</strong><br>Du hast jederzeit das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) sowie auf Widerspruch gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (Art. 21). Eine erteilte Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen. Wende dich dazu einfach an info@produced-by-lakatana.com.</p>
+    <p><strong>11. Beschwerderecht</strong><br>Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig ist der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg, Lautenschlagerstraße 20, 70173 Stuttgart.</p>
+    <p><strong>12. Aktualität</strong><br>Stand: Oktober 2026. Wir passen diese Datenschutzerklärung an, sobald neue Funktionen oder Dienste hinzukommen.</p>
+
     <h2 id="agb">AGB</h2>
-    <p class="todo">AGB für Studio-Sessions, Online Mix &amp; Master und Beat-Lizenzen folgen (Storno, Korrekturrunden, Nutzungsrechte).</p>
+    <p>Die Allgemeinen Geschäftsbedingungen für Studio-Sessions, Online Mix &amp; Master und Beat-Lizenzen werden derzeit erstellt. Bis dahin gelten die individuell vereinbarten Konditionen deines Angebots.</p>
   </div></section>
 </div>
 </main>
@@ -1262,7 +1278,7 @@ body{overflow-x:clip}
 <!-- Cookie -->
 <div class="cookie" id="cookie" hidden role="dialog" aria-label="Cookies">
   <h4 data-en="Cookies &amp; privacy">Cookies &amp; Datenschutz</h4>
-  <p data-en="We use necessary cookies so the site works. With your consent also statistics and marketing (e.g. Meta Pixel).">Wir nutzen notwendige Cookies, damit die Seite funktioniert. Mit deiner Zustimmung auch Statistik und Marketing (z. B. Meta-Pixel).</p>
+  <p data-en="We only use technically necessary storage (e.g. your cookie choice). We do not use tracking or marketing cookies.">Wir verwenden nur technisch notwendige Speicherungen (z. B. deine Cookie-Auswahl). Tracking- oder Marketing-Cookies setzen wir nicht ein.</p>
   <div class="links"><a href="#impressum" data-go="impressum">Impressum</a><a href="#datenschutz" data-go="datenschutz" data-en="Privacy">Datenschutz</a><a href="#agb" data-go="agb" data-en="Terms">AGB</a></div>
   <div class="opts" id="cookieOpts">
     <label class="check"><input type="checkbox" checked disabled> <span data-en="Necessary (always on)">Notwendig (immer aktiv)</span></label>
@@ -1270,9 +1286,9 @@ body{overflow-x:clip}
     <label class="check"><input type="checkbox" id="ck-mkt"> <span data-en="Marketing">Marketing</span></label>
   </div>
   <div class="cta-row">
-    <button class="btn solid sm" type="button" id="ckAll" data-en="Accept all">Alle akzeptieren</button>
-    <button class="btn ghost sm" type="button" id="ckNec" data-en="Necessary only">Nur notwendige</button>
-    <button class="linkbtn" type="button" id="ckSet" data-en="Settings">Einstellungen</button>
+    <button class="btn solid sm" type="button" id="ckAll" data-en="Got it">Verstanden</button>
+    
+    
   </div>
 </div>
 
@@ -1288,7 +1304,7 @@ body{overflow-x:clip}
 <div class="aura" id="aura" aria-hidden="true"></div>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.js"></script>
+<script src="vendor/maplibre-gl.js"></script>
 <script>
 (()=>{
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
@@ -1604,8 +1620,8 @@ $$('#portalTabs button').forEach(b=>b.addEventListener('click',()=>{
 const ck=$('#cookie');let saved=null;try{saved=localStorage.getItem('lk-cookie')}catch(e){}
 if(!saved) ck.hidden=false;
 function ckSave(v){try{localStorage.setItem('lk-cookie',v)}catch(e){}ck.hidden=true;}
-$('#ckAll').onclick=()=>ckSave('all');$('#ckNec').onclick=()=>ckSave($('#cookieOpts').classList.contains('on')?JSON.stringify({stat:$('#ck-stat').checked,mkt:$('#ck-mkt').checked}):'necessary');
-$('#ckSet').onclick=()=>$('#cookieOpts').classList.toggle('on');$('#openCookie').onclick=()=>{ck.hidden=false;};
+$('#ckAll').onclick=()=>ckSave('necessary');
+$('#openCookie').onclick=()=>{ck.hidden=false;};
 
 /* ---------- Sound-Toggle (Hero-Video) ---------- */
 $('#soundToggle').onclick=()=>{const v=$('#heroVideo');if(!v.src){ $('#soundToggle').textContent=T('Video folgt','Video follows');return;} v.muted=!v.muted;$('#soundToggle').textContent=v.muted?T('Ton an','Sound on'):T('Ton aus','Sound off');};
