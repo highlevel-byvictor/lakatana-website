@@ -802,6 +802,12 @@ body{overflow-x:clip}
 /* v18 Komm rein: Lara S/W */
 .gal-sec{background:radial-gradient(40% 60% at 50% 50%,rgba(124,77,224,.12),transparent 70%),linear-gradient(180deg,rgba(7,6,11,.55),rgba(7,6,11,.25) 40%,rgba(7,6,11,.75)),url(media/komm-rein-bw.webp) center/auto 100% no-repeat,#07060B!important}
 @media (max-width:820px){.gal-sec{background:linear-gradient(180deg,rgba(7,6,11,.6),rgba(7,6,11,.45) 50%,rgba(7,6,11,.85)),url(media/komm-rein-bw.webp) 92% center/cover no-repeat,#07060B!important}}
+
+/* v19 Musik einreichen: Lara S/W */
+.submit-sec{position:relative;overflow:hidden;margin:28px max(10px,env(safe-area-inset-left,0px));border-radius:12px 48px 12px 48px;box-shadow:0 50px 120px -60px rgba(40,20,80,.8);background:radial-gradient(40% 60% at 20% 30%,rgba(124,77,224,.22),transparent 70%),linear-gradient(90deg,rgba(7,6,11,.85) 0%,rgba(7,6,11,.5) 14%,rgba(7,6,11,.62) 35%,rgba(7,6,11,.9) 55%,rgba(7,6,11,.96) 100%),linear-gradient(180deg,rgba(7,6,11,.2),rgba(7,6,11,.7)),url(media/submit-bw.webp) left 0 top 20%/auto 135% no-repeat,#07060B!important}
+.submit-sec .h2{color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.7)}
+.submit-sec p,.submit-sec .step p{text-shadow:0 1px 8px rgba(0,0,0,.85)}
+@media (max-width:820px){.submit-sec{border-radius:10px 32px 10px 32px;background:linear-gradient(180deg,rgba(7,6,11,.45) 0%,rgba(7,6,11,.6) 45%,#07060B 96%) center 0/100% 150vw no-repeat,url(media/submit-bw.webp) center 0/100% auto no-repeat,#07060B!important}}
 </style>
 
 <div class="ticker" aria-label="Aktuelle Angebote"><div class="track" id="tickerTrack"></div></div>
@@ -1235,7 +1241,7 @@ body{overflow-x:clip}
     <h1 class="big" data-en="Mix &amp; <em>Master.</em>">Mix &amp; <em>Master.</em></h1>
     <p class="lead" data-en="Professionally mixed – fast and release-ready.">Professionell abgemischt – schnell und release-ready.</p>
   </div></section>
-  <section class="sec light"><div class="wrap two">
+  <section class="sec dark submit-sec"><div class="wrap two" style="position:relative;z-index:1">
     <div>
       <h2 class="h2" style="margin-bottom:18px" data-en="Submit <em>music.</em>">Musik <em>einreichen.</em></h2>
       <p class="muted" style="margin-bottom:22px" data-en="Secure upload: files are transferred encrypted and only Lara can access them.">Sicheres Hochladen: Dateien werden verschlüsselt übertragen und nur Lara hat Zugriff.</p>
