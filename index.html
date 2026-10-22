@@ -782,6 +782,14 @@ body{overflow-x:clip}
 .voices-sec .vid b{color:#fff}.voices-sec .vid small{color:#F3D58A}
 .voices-sec .voices>div:not(.vid) p,.voices-sec .voices p{color:rgba(240,235,248,.9)}
 @media (max-width:820px){.voices-sec{border-radius:32px 10px 32px 10px;padding-top:300px!important}.voices-sec .vbg{background:linear-gradient(180deg,transparent 0%,transparent 55%,#07060B 100%) 50% 0/100% 560px no-repeat,url(media/lara-point.webp) 50% 0/auto 560px no-repeat,#07060B}.voices-sec .vid .ph>div{padding-top:64px}}
+
+/* v16 Angebot: Lara S/W */
+#angebot{background:radial-gradient(45% 70% at 78% 30%,rgba(124,77,224,.2),transparent 70%),radial-gradient(40% 60% at 100% 100%,rgba(106,63,209,.4),transparent 70%),linear-gradient(180deg,rgba(7,6,11,.15),rgba(7,6,11,0) 45%,rgba(7,6,11,.55)),url(media/lara-offer-bw.webp) right -2% top 0/auto 118% no-repeat,radial-gradient(80% 120% at 0% 0%,rgba(124,77,224,.22),transparent 60%),#07060B!important;align-items:end!important;min-height:520px}
+#angebot>div:last-child{align-self:end;padding-top:220px}
+#angebot::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 40%,rgba(155,107,255,.18) 60%,transparent 75%);mix-blend-mode:screen;pointer-events:none;z-index:0}
+#angebot>*{position:relative;z-index:1}
+#angebot .cd>div,#angebot [class*="count"] > *{backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);background:rgba(10,7,18,.45)}
+@media (max-width:860px){#angebot{background:linear-gradient(180deg,rgba(7,6,11,0) 0%,rgba(7,6,11,.4) 40%,#07060B 62%),radial-gradient(70% 40% at 60% 18%,rgba(124,77,224,.35),transparent 70%),url(media/lara-offer-bw.webp) 70% 0/auto 440px no-repeat,#07060B!important;padding-top:300px;min-height:0}#angebot>div:last-child{padding-top:0}}
 </style>
 
 <div class="ticker" aria-label="Aktuelle Angebote"><div class="track" id="tickerTrack"></div></div>
@@ -1097,9 +1105,8 @@ body{overflow-x:clip}
   </section>
 
   <!-- Stimmen -->
-  <section class="sec dark voices-sec">
-    <div class="vbg" aria-hidden="true"></div>
-    <div class="wrap" style="position:relative;z-index:2">
+  <section class="sec light">
+    <div class="wrap">
       <span class="eyebrow" data-en="Real voices">Echte Stimmen</span>
       <h2 class="h2" style="margin:14px 0 36px" data-en="What artists <em>say.</em>">Was Künstler <em>sagen.</em></h2>
       <div class="voices">
