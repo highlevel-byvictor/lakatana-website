@@ -806,6 +806,24 @@ body{overflow-x:clip}
 .submit-sec .h2{color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.7)}
 .submit-sec p,.submit-sec .step p{text-shadow:0 1px 8px rgba(0,0,0,.85)}
 @media (max-width:820px){.submit-sec{border-radius:10px 32px 10px 32px;background:linear-gradient(180deg,rgba(7,6,11,.45) 0%,rgba(7,6,11,.6) 45%,#07060B 96%) center 0/100% 150vw no-repeat,url(media/submit-bw.webp) center 0/100% auto no-repeat,#07060B!important}}
+
+/* v21 Marketing-System: Gespräch, Problemfragen, Angebot */
+.hero-free{color:#E9E3F2;font-size:14.5px;letter-spacing:.04em;text-decoration:none;opacity:.88;border-bottom:1px solid rgba(201,162,74,.5);padding-bottom:3px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+.hero-free b{color:#F3D58A;font-weight:600}.hero-free:hover{opacity:1}
+.svc-row p.pq{font-family:var(--f-display);font-size:clamp(21px,1.8vw,26px);font-weight:600;font-style:italic;color:#F3D58A;line-height:1.25;margin-bottom:10px;text-shadow:0 2px 14px rgba(0,0,0,.85)}
+.offer-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.offer-list li{display:flex;gap:12px;align-items:center;font-size:16px;color:#ECE7F2;padding:12px 16px;border:1px solid rgba(201,162,74,.4);border-radius:14px;background:rgba(10,7,18,.5);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.offer-list li::before{content:"";flex:0 0 8px;height:8px;transform:rotate(45deg);background:var(--gold-grad)}
+.talk{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:36px}
+.talk-q{position:relative;padding:28px 24px 26px;background:var(--panel);border:1px solid var(--line2);border-radius:22px 6px 22px 6px;box-shadow:0 30px 60px -45px rgba(40,20,80,.6)}
+.talk-q b{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#0B0812,#3B1F7A);color:#F3D58A;font-family:var(--f-display);font-size:19px;margin-bottom:14px}
+.talk-q h3{font-size:24px;margin-bottom:6px}.talk-q p{font-size:15px;color:var(--muted)}
+.talk-tips{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;padding:22px 26px;border-radius:999px;background:linear-gradient(90deg,#0B0812,#2A1758 70%,#6A3FD1);color:#fff}
+.talk-tips .eyebrow{color:#F3D58A}
+.talk-tips ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;flex:1}
+.talk-tips li::before{content:"✓ ";color:#F3D58A}
+.no-guarantee{font-size:11px;color:rgba(155,147,171,.55);margin:18px 0 0;text-align:left}
+@media (max-width:860px){.talk{grid-template-columns:1fr}.talk-tips{border-radius:24px;flex-direction:column;align-items:flex-start}}
 </style>
 
 <div class="ticker" aria-label="Aktuelle Angebote"><div class="track" id="tickerTrack"></div></div>
@@ -851,6 +869,7 @@ body{overflow-x:clip}
         <a class="btn gold" href="#studio" data-go="studio" data-en="Book studio now">Jetzt Studio buchen</a>
         <a class="btn violet" href="#mixmaster" data-go="mixmaster" data-en="Book mix &amp; master now">Jetzt Mix &amp; Master buchen</a>
       </div>
+      <a class="hero-free" href="#gespraech" data-en="Not sure yet? <b>Free intro call with Lara</b> →">Noch unsicher? <b>Kostenloses Kennenlerngespräch mit Lara</b> →</a>
       <div class="hero-meta"><span>Stuttgart</span><i>✦</i><span>Recording</span><i>✦</i><span>Mixing</span><i>✦</i><span>Mastering</span><i>✦</i><span>Bundesweit</span></div>
     </div>
     <span class="video-note" data-en="Placeholder: studio &amp; session video follows">Platzhalter: Studio- &amp; Session-Video folgt</span>
@@ -862,12 +881,12 @@ body{overflow-x:clip}
       <a href="#studio" data-go="studio">
         <span class="eyebrow" data-en="I want to record">Ich will aufnehmen</span>
         <h3 data-en="Book the studio">Studio buchen</h3>
-        <p data-en="Your next session in a focused, high-quality environment.">Deine nächste Session in einem fokussierten, hochwertigen Umfeld.</p>
+        <p data-en="Your vocals, recorded properly – with Lara at your side for every take.">Deine Vocals, richtig aufgenommen – Lara sitzt bei jedem Take mit dir am Pult.</p>
       </a>
       <a href="#mixmaster" data-go="mixmaster">
         <span class="eyebrow" data-en="I already have my tracks">Ich habe schon Spuren</span>
         <h3 data-en="Book mix &amp; master">Mix &amp; Master buchen</h3>
-        <p data-en="Professionally mixed – fast and release-ready.">Professionell abgemischt – schnell und release-ready.</p>
+        <p data-en="Send your stems, get a song that holds up next to the big releases.">Spuren schicken, Song zurückbekommen, der neben großen Releases besteht.</p>
       </a>
     </div>
   </div></section>
@@ -877,20 +896,19 @@ body{overflow-x:clip}
     <div class="wrap">
       <div class="offer dark" id="angebot">
         <div>
-          <span class="tag" data-en="Limited offer">Zeitlich begrenzt</span>
+          <span class="tag" data-en="Opening offer">Zur Eröffnung</span>
           <h3 data-en="Opening offer:<br><em>Mix &amp; Master</em> for your first song">Eröffnungsangebot:<br><em>Mix &amp; Master</em> für deinen ersten Song</h3>
-          <p class="lead" style="margin-block:14px 22px"><span class="price-old">129 €</span><strong style="color:var(--silver);font-size:28px;font-family:var(--f-display)">99 €</strong> <span class="muted" data-en="· including one revision round">· inklusive einer Korrekturrunde</span></p>
+          <p class="lead" style="margin-block:14px 22px"><strong style="color:var(--silver);font-size:28px;font-family:var(--f-display)">99 €</strong> <span class="muted" data-en="· including one revision round">· inklusive einer Korrekturrunde</span></p>
           <div class="cta-row"><a class="btn violet" href="#mixmaster" data-go="mixmaster" data-en="Book now">Jetzt Buchen</a></div>
-          <p class="example" style="margin-top:16px" data-en="Example offer – Lara sets price &amp; end date">Beispiel-Angebot – Preis &amp; Enddatum legt Lara fest</p>
+          <p class="example" style="margin-top:16px" data-en="Example offer – Lara sets the final price">Beispiel-Angebot – den finalen Preis legt Lara fest</p>
         </div>
         <div>
-          <p class="eyebrow" style="margin-bottom:14px" data-en="Offer ends in">Angebot endet in</p>
-          <div class="count" id="countdown">
-            <div><b id="cd-d">00</b><small data-en="Days">Tage</small></div>
-            <div><b id="cd-h">00</b><small data-en="Hrs">Std</small></div>
-            <div><b id="cd-m">00</b><small>Min</small></div>
-            <div><b id="cd-s">00</b><small data-en="Sec">Sek</small></div>
-          </div>
+          <p class="eyebrow" style="margin-bottom:14px" data-en="What's included">Das ist drin</p>
+          <ul class="offer-list">
+            <li data-en="Mix &amp; master of one song">Mix &amp; Master für einen Song</li>
+            <li data-en="One revision round included">Eine Korrekturrunde inklusive</li>
+            <li data-en="WAV + streaming master">WAV + Streaming-Master</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -910,7 +928,7 @@ body{overflow-x:clip}
           <h2 class="big" data-en="Record<em>.</em>">AUFNEHMEN<em>.</em></h2>
         </div>
         <div>
-          <p data-en="Your next session in a focused, high-quality environment. Rap, singing or podcast – Lara records you and guides you through every take.">Deine nächste Session in einem fokussierten, hochwertigen Umfeld. Rap, Gesang oder Podcast – Lara nimmt dich auf und begleitet dich durch jeden Take.</p>
+          <p class="pq" data-en="Your vocals sound like your bedroom at home, not like a release?">Deine Vocals klingen zu Hause nach Zimmer statt nach Release?</p><p data-en="Rap, singing or podcast – in the booth, Lara records you and guides you through every take until it sits.">Rap, Gesang oder Podcast – in der Kabine nimmt Lara dich auf und bleibt dran, bis jeder Take sitzt.</p>
           <div class="cta-row"><a class="btn solid sm" href="#studio" data-go="studio" data-en="Book session">Session buchen</a><a class="btn ghost sm" href="#studio" data-go="studio" data-en="Discover the studio">Studio entdecken</a></div>
         </div>
       </div>
@@ -920,7 +938,7 @@ body{overflow-x:clip}
           <h2 class="big" data-en="Mixing<em>.</em>">MIXING<em>.</em></h2>
         </div>
         <div>
-          <p data-en="Clear sound, clean balance and a mix that feels release-ready. Also completely online.">Klarer Sound, saubere Balance und ein Mix, der release-fertig wirkt. Auch komplett online.</p>
+          <p class="pq" data-en="Your track sounds different in the car than in your headphones?">Dein Track klingt im Auto ganz anders als im Kopfhörer?</p><p data-en="Lara balances vocals and beat so your song works everywhere. In the studio or completely online.">Lara bringt Stimme und Beat in Balance, damit dein Song überall funktioniert. Im Studio oder komplett online.</p>
           <div class="cta-row"><a class="btn solid sm" href="#mixmaster" data-go="mixmaster" data-en="Request mixing">Mixing anfragen</a><a class="btn ghost sm" href="#hoerproben" data-go="hoerproben" data-en="See mix &amp; master">Mix &amp; Master ansehen</a></div>
         </div>
       </div>
@@ -930,7 +948,7 @@ body{overflow-x:clip}
           <h2 class="big" data-en="Mastering<em>.</em>">MASTERING<em>.</em></h2>
         </div>
         <div>
-          <p data-en="The finale for platforms, release and consistent loudness.">Das Finale für Plattformen, Release und konsistente Lautheit.</p>
+          <p class="pq" data-en="Your song is quieter on Spotify than the ones before and after it?">Dein Song ist auf Spotify leiser als die Tracks davor und danach?</p><p data-en="The last step before release: the right loudness for every platform, clean and consistent.">Der letzte Schritt vor dem Release: die richtige Lautheit für jede Plattform, sauber und gleichmäßig.</p>
           <div class="cta-row"><a class="btn solid sm" href="#mixmaster" data-go="mixmaster" data-en="Request mastering">Mastering anfragen</a><a class="btn ghost sm" href="#pakete" data-go="pakete" data-en="Prepare release">Release vorbereiten</a></div>
         </div>
       </div>
@@ -975,7 +993,7 @@ body{overflow-x:clip}
   <section class="statement stairs">
     <div class="stairs-bg" aria-hidden="true"></div>
     <div class="wrap">
-      <p data-en="Enough beating around the bush. <em>Now it's your turn.</em>">Genug um den heißen Brei geredet. <em>Jetzt bist du dran.</em></p>
+      <p data-en="Your song has waited long enough. <em>Let's go.</em>">Dein Song hat lang genug gewartet. <em>Jetzt wird aufgenommen.</em></p>
       <div class="cta-row" style="justify-content:center"><a class="btn gold" href="#studio" data-go="studio" data-en="Record your song">Nimm deinen Song auf</a></div>
     </div>
   </section>
@@ -1121,6 +1139,29 @@ body{overflow-x:clip}
     </div>
   </section>
 
+  <!-- Kennenlerngespräch -->
+  <section class="sec light" id="gespraech">
+    <div class="wrap">
+      <span class="eyebrow" data-en="Listen first">Erst zuhören</span>
+      <h2 class="h2" style="margin-top:14px" data-en="Most studios sell you hours. <em>Lara listens first.</em>">Die meisten Studios verkaufen dir Stunden. <em>Lara hört erst zu.</em></h2>
+      <p class="lead muted" style="margin-top:14px;max-width:760px" data-en="Like a soundcheck before the show: in a free intro call Lara finds out where your song stands – and what really brings it forward.">Wie ein Soundcheck vor der Show: Im kostenlosen Kennenlerngespräch findet Lara heraus, wo dein Song steht – und was ihn wirklich weiterbringt.</p>
+      <div class="talk">
+        <div class="talk-q"><b>01</b><h3 data-en="Where does your song stand today?">Wo steht dein Song heute?</h3><p data-en="Idea, demo, finished vocals or a rough mix – Lara listens in.">Idee, Demo, fertige Vocals oder Rohmix – Lara hört rein.</p></div>
+        <div class="talk-q"><b>02</b><h3 data-en="What could it become?">Was wäre drin?</h3><p data-en="Release, live show, playlist – where do you want to go with it?">Release, Auftritt, Playlist – wo willst du damit hin?</p></div>
+        <div class="talk-q"><b>03</b><h3 data-en="Which one step is worth it now?">Welcher Schritt lohnt sich jetzt?</h3><p data-en="Recording, mix, master or just a tip – you get an honest answer.">Aufnahme, Mix, Master oder nur ein Tipp – du bekommst eine ehrliche Antwort.</p></div>
+      </div>
+      <div class="talk-tips">
+        <span class="eyebrow" data-en="So your call is worth it">Damit sich dein Gespräch lohnt</span>
+        <ul>
+          <li data-en="Have your song or demo ready as a link or file">Song oder Demo als Link oder Datei bereithalten</li>
+          <li data-en="Leave your phone number so Lara can reach you">Handynummer angeben, damit Lara dich erreicht</li>
+          <li data-en="Plan 15 quiet minutes">15 ruhige Minuten einplanen</li>
+        </ul>
+        <a class="btn violet" href="#kontakt" data-talk data-en="Request free intro call">Kennenlerngespräch anfragen</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Stimmen -->
   <section class="sec dark voices-sec">
     <div class="vbg" aria-hidden="true"></div>
@@ -1148,14 +1189,14 @@ body{overflow-x:clip}
         </button>
         <div class="faq-body" id="faqBody">
       <div class="faq">
-        <details><summary data-en="How do I book a studio?">Wie buche ich ein Studio?</summary><p data-en="Directly and bindingly online via the calendar on the studio page.">Direkt und verbindlich online über den Kalender auf der Studio-Seite. Studio-Erfahrung brauchst du nicht, Lara führt dich durch die Session.</p></details>
-        <details><summary data-en="How do I book mix/mastering?">Wie buche ich Mix/Mastering?</summary><p data-en="You choose a package, upload your stems as WAV, and receive a first version. After your feedback you get the final files in your artist login.">Du wählst ein Paket, lädst deine Spuren als WAV hoch und bekommst eine erste Version. Nach deiner Rückmeldung erhältst du die finalen Dateien in deinem Kundenbereich.</p></details>
-        <details><summary data-en="Which files should I send?">Welche Dateien soll ich schicken?</summary><p data-en="Individual tracks (stems) as WAV, 24 bit, all starting at the same point, plus the beat and a reference song if you have one.">Einzelspuren (Stems) als WAV, 24 Bit, alle ab demselben Startpunkt, dazu den Beat und gern einen Referenz-Song.</p></details>
-        <details><summary data-en="Where can I see the studio equipment?">Wo sehe ich das Equipment des Studios?</summary><p data-en="On the studio page under “The equipment”.">Auf der Studio-Seite unter „Das Equipment“.</p></details>
-        <details><summary data-en="Where can I see where the studio is?">Wo sehe ich, wo das Studio ist?</summary><p data-en="On the map in the location section and directly in Google Maps.">Auf der Karte im Bereich Standort und direkt in Google Maps.</p></details>
-        <details><summary data-en="How can I change my booking?">Wie kann ich meine Buchung ändern?</summary><p data-en="Via the link in your booking confirmation or with a short message to Lara.">Über den Link in deiner Buchungsbestätigung oder mit einer kurzen Nachricht an Lara.</p></details>
-        <details><summary data-en="How do I pay and where do I find my invoice?">Wie bezahle ich und wo finde ich meine Rechnung?</summary><p data-en="You get your invoice by email and additionally in your artist login, where all invoices and files are stored.">Du bekommst deine Rechnung per E-Mail und zusätzlich in deinem Kundenbereich, wo alle Rechnungen und Dateien gesammelt liegen.</p></details>
-        <details><summary data-en="Can I buy beats too?">Kann ich auch Beats kaufen?</summary><p data-en="Yes. Leases and exclusive beats are on the beats page and on BeatStars.">Ja. Lizenzen und exklusive Beats findest du auf der Beats-Seite und bei BeatStars.</p></details>
+        <details><summary data-en="Do I need studio experience?">Brauche ich Studio-Erfahrung?</summary><p data-en="No. Lara guides you through the session step by step – many artists record for the first time with her.">Nein. Lara führt dich Schritt für Schritt durch die Session – viele nehmen bei ihr zum ersten Mal auf.</p></details>
+        <details><summary data-en="How do I get a studio date?">Wie komme ich an einen Studiotermin?</summary><p data-en="Pick a free slot in the calendar on the studio page. Unsure? Request the free intro call first.">Freien Termin im Kalender auf der Studio-Seite wählen. Noch unsicher? Erst das kostenlose Kennenlerngespräch anfragen.</p></details>
+        <details><summary data-en="How does online mix &amp; master work?">Wie läuft Mix &amp; Master online?</summary><p data-en="Choose a package, upload your stems as WAV, get a first version. After your feedback the final files are waiting in your customer area.">Paket wählen, Spuren als WAV hochladen, erste Version bekommen. Nach deinem Feedback liegen die fertigen Dateien in deinem Kundenbereich.</p></details>
+        <details><summary data-en="What should I send for the mix?">Was soll ich für den Mix schicken?</summary><p data-en="Every track separately as WAV (24 bit), all starting at the same point, plus the beat and a reference song you like.">Jede Spur einzeln als WAV (24 Bit), alle ab demselben Startpunkt, dazu den Beat und einen Referenz-Song, der dir gefällt.</p></details>
+        <details><summary data-en="What does it cost?">Was kostet das?</summary><p data-en="Fixed package prices instead of a surprise invoice – see Packages. Not sure which package fits? Lara tells you in the intro call.">Feste Paketpreise statt Überraschungsrechnung – siehe Pakete. Unsicher, welches passt? Lara sagt es dir im Kennenlerngespräch.</p></details>
+        <details><summary data-en="Can I start with just one song?">Kann ich erst mal nur einen Song machen?</summary><p data-en="Of course. Many artists start with one song and come back for the next.">Klar. Viele starten mit einem Song und kommen für den nächsten wieder.</p></details>
+        <details><summary data-en="How do I pay and where is my invoice?">Wie bezahle ich und wo ist meine Rechnung?</summary><p data-en="You get the invoice by email, and it is also stored in your customer area together with your files.">Die Rechnung kommt per E-Mail und liegt zusätzlich mit deinen Dateien im Kundenbereich.</p></details>
+        <details><summary data-en="Can I buy beats too?">Gibt es auch Beats?</summary><p data-en="Yes – leases and exclusive beats on the beats page and on BeatStars.">Ja – Lizenzen und exklusive Beats auf der Beats-Seite und bei BeatStars.</p></details>
       </div>
         </div>
       </div>
@@ -1168,7 +1209,7 @@ body{overflow-x:clip}
       <div>
         <span class="eyebrow" data-en="Contact">Kontakt</span>
         <h2 class="h2" style="margin-top:14px" data-en="Any <em>questions?</em>">Noch <em>Fragen?</em></h2>
-        <p class="lead muted" style="margin-top:16px" data-en="Contact us here! Lara answers you personally.">Kontaktiere uns hier! Lara antwortet dir persönlich.</p>
+        <p class="lead muted" style="margin-top:16px" data-en="Write to Lara – she answers you herself, no call centre.">Schreib Lara – sie antwortet dir selbst, kein Callcenter.</p>
         <div style="margin-top:28px;display:flex;flex-direction:column;gap:10px;font-size:15.5px">
           <span>✉ info@produced-by-lakatana.com</span>
           <span>☎ <span class="todo" data-en="Business number follows">Geschäftsnummer folgt</span></span>
@@ -1180,8 +1221,16 @@ body{overflow-x:clip}
         <label class="f"><span data-en="Email">E-Mail</span><input id="c-mail" type="email" required autocomplete="email"></label>
         <label class="f full"><span data-en="What is it about?">Worum geht es?</span>
           <select id="c-topic">
-            <option data-en="Studio session">Studio-Session</option><option>Mix &amp; Master</option><option data-en="Beats">Beats</option><option data-en="Podcast editing">Podcast-Bearbeitung</option><option data-en="Composition">Komposition</option><option data-en="Short videos / cover art">Kurzvideos / Cover-Bilder</option><option data-en="Collaboration">Kooperation</option>
+            <option data-en="Free intro call">Kostenloses Kennenlerngespräch</option><option data-en="Studio session">Studio-Session</option><option>Mix &amp; Master</option><option data-en="Beats">Beats</option><option data-en="Podcast editing">Podcast-Bearbeitung</option><option data-en="Composition">Komposition</option><option data-en="Short videos / cover art">Kurzvideos / Cover-Bilder</option><option data-en="Collaboration">Kooperation</option>
           </select></label>
+        <label class="f"><span data-en="Phone (optional)">Handynummer (optional)</span><input id="c-tel" type="tel" autocomplete="tel"></label>
+        <label class="f"><span data-en="Genre">Genre</span><input id="c-genre" placeholder="Rap, Pop, R&amp;B …" data-en-ph="Rap, pop, R&amp;B …"></label>
+        <label class="f"><span data-en="Where does your song stand?">Wo steht dein Song?</span>
+          <select id="c-stage"><option data-en="Just an idea">Nur eine Idee</option><option data-en="Demo">Demo</option><option data-en="Vocals recorded">Vocals aufgenommen</option><option data-en="Rough mix ready">Rohmix fertig</option></select></label>
+        <label class="f"><span data-en="Your goal">Dein Ziel</span>
+          <select id="c-goal"><option data-en="Release">Release</option><option data-en="Live show / booking">Auftritt / Booking</option><option data-en="For myself">Für mich</option><option data-en="Not sure yet">Weiß ich noch nicht</option></select></label>
+        <label class="f full"><span data-en="Budget">Budget</span>
+          <select id="c-budget"><option data-en="Not sure yet">Weiß ich noch nicht</option><option data-en="under 100 €">unter 100 €</option><option>100 – 300 €</option><option>300 – 600 €</option><option data-en="more than 600 €">über 600 €</option></select></label>
         <label class="f full"><span data-en="Message">Nachricht</span><textarea id="c-msg"></textarea></label>
         <label class="check full"><input type="checkbox" id="c-ok" required><span data-en="I agree that my data will be used to process my request (privacy policy).">Ich bin einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage genutzt werden (Datenschutz).</span></label>
         <div class="full"><button class="btn solid" type="submit" data-en="Send message">Nachricht senden</button></div>
@@ -1194,7 +1243,7 @@ body{overflow-x:clip}
     <div class="wrap">
       <div class="news dark">
         <div><span class="eyebrow" data-en="Newsletter">Katana-Letter</span><h3 style="font-size:clamp(28px,3vw,40px);margin-top:10px" data-en="Subscribe to our Katana letter">Abonniere unseren Katana-Letter</h3><p class="muted" style="margin-top:8px;font-size:14px" data-en="Offers and free beats first.">Angebote und kostenlose Beats zuerst.</p></div>
-        <form data-form id="newsForm"><input type="email" id="n-mail" placeholder="Wie lautet deine E-Mail Adresse?" data-en-ph="What is your email address?" required aria-label="E-Mail"><button class="btn violet" type="submit" data-en="Subscribe">ABONNIEREN</button><div class="ok-msg" style="flex-basis:100%" data-en="The newsletter starts soon – no data has been stored.">Der Newsletter startet bald – es wurden keine Daten gespeichert.</div><p class="muted" style="flex-basis:100%;font-size:12px" data-en="By clicking SUBSCRIBE you agree to our privacy and cookie policies.">Durch Klicken auf ABONNIEREN stimmst du unseren Datenschutz- und Cookie-Richtlinien zu.</p></form>
+        <form data-form id="newsForm"><input type="email" id="n-mail" placeholder="Deine E-Mail" data-en-ph="Your email" required aria-label="E-Mail"><button class="btn violet" type="submit" data-en="Subscribe">ABONNIEREN</button><div class="ok-msg" style="flex-basis:100%" data-en="The newsletter starts soon – no data has been stored.">Der Newsletter startet bald – es wurden keine Daten gespeichert.</div><label class="check" style="flex-basis:100%;font-size:12px"><input type="checkbox" required> <span data-en="Yes, send me the Katana letter. I confirm via the link in the email (double opt-in) and can unsubscribe anytime. Details in the privacy policy.">Ja, schick mir den Katana-Letter. Ich bestätige per Link in der E-Mail (Double-Opt-in) und kann mich jederzeit abmelden. Details in der Datenschutzerklärung.</span></label></form>
       </div>
     </div>
   </section>
@@ -1237,7 +1286,7 @@ body{overflow-x:clip}
   <section class="pagehead"><div class="wrap">
     <span class="eyebrow" data-en="Online · nationwide">Online · bundesweit</span>
     <h1 class="big" data-en="Mix &amp; <em>Master.</em>">Mix &amp; <em>Master.</em></h1>
-    <p class="lead" data-en="Professionally mixed – fast and release-ready.">Professionell abgemischt – schnell und release-ready.</p>
+    <p class="lead" data-en="Send your stems, get a song that holds up next to the big releases.">Spuren schicken, Song zurückbekommen, der neben großen Releases besteht.</p>
   </div></section>
   <section class="sec dark submit-sec"><div class="wrap two" style="position:relative;z-index:1">
     <div>
@@ -1391,6 +1440,7 @@ body{overflow-x:clip}
       <span>© 2026 LA KATANA Studio · <span data-en="Like the blade – two sides, one truth.">Wie die Klinge – zwei Seiten, eine Wahrheit.</span></span>
       <div><a href="#impressum" data-go="impressum">Impressum</a><a href="#datenschutz" data-go="datenschutz" data-en="Privacy">Datenschutz</a><a href="#agb" data-go="agb" data-en="Terms">AGB</a><button class="linkbtn" type="button" id="openCookie" data-en="Cookie settings">Cookie-Einstellungen</button></div>
     </div>
+    <p class="no-guarantee" data-en="We deliver sound in release quality. We cannot guarantee streams, reach or chart success.">Wir liefern Sound in Release-Qualität. Streams, Reichweite oder Charterfolge können wir nicht garantieren.</p>
     <a class="builtby" href="https://www.highlevel-performance.de" target="_blank" rel="noopener"><span data-en="Website built by">Website gebaut von</span> High Level Performance by Victor</a>
   </div>
 </footer>
@@ -1596,7 +1646,7 @@ requestAnimationFrame(draw);
 
 /* ---------- Countdown ---------- */
 const END=new Date('2026-11-30T23:59:59+01:00').getTime();
-function cd(){let s=Math.max(0,(END-Date.now())/1000|0);const d=s/86400|0;s%=86400;const h=s/3600|0;s%=3600;const m=s/60|0;s%=60;
+function cd(){if(!document.getElementById('cd-d'))return;let s=Math.max(0,(END-Date.now())/1000|0);const d=s/86400|0;s%=86400;const h=s/3600|0;s%=3600;const m=s/60|0;s%=60;
   $('#cd-d').textContent=String(d).padStart(2,'0');$('#cd-h').textContent=String(h).padStart(2,'0');$('#cd-m').textContent=String(m).padStart(2,'0');$('#cd-s').textContent=String(s).padStart(2,'0');}
 cd();setInterval(cd,1000);
 
@@ -1762,6 +1812,7 @@ drop.addEventListener('drop',e=>showFiles(e.dataTransfer.files));fin.addEventLis
 function showFiles(fl){$('#fileList').innerHTML=[...fl].map(f=>`<div><span>${f.name.replace(/</g,'&lt;')}</span><span class="muted">${(f.size/1048576).toFixed(1)} MB</span></div>`).join('');}
 
 /* ---------- Formulare ---------- */
+$$('[data-talk]').forEach(b=>b.addEventListener('click',()=>{const t=document.getElementById('c-topic');if(t)t.selectedIndex=0;}));
 $$('[data-form]').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();f.querySelector('.ok-msg').classList.add('on');}));
 
 /* ---------- Login / Rechnungen ---------- */
